@@ -1,0 +1,46 @@
+{
+  "ignition": {
+    "version": "3.3.0"
+  },
+  "passwd": {
+    "users": [
+      {
+        "name": "core",
+        "sshAuthorizedKeys": [
+          "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPFJdzyw3pKUX7GxytCeUvJCGlSeKg6mRNOOGF/yLhwH"
+        ]
+      }
+    ]
+  },
+  "storage": {
+    "files": [
+      {
+        "overwrite": true,
+        "path": "/etc/yum.repos.d/kuberentes.repo",
+        "contents": {
+          "compression": "gzip",
+          "source": "data:;base64,H4sIAAAAAAAC/4zMQQrCMBCF4X1O0QskQZAqQk/gEUQknT6mkKQzJA2Y27tQdOvu8fj5brHNKBt21LvZQsZ0/R5mDhWtpGndd60X7zVQDIzqKElbHItwgiPJvrfsC1Sq/3kW6WSf5/ExHg22MCcs08GwMq2g+J4R/U99EfJFs/1UNqI7Vh4G8woAAP//SnnV+8MAAAA="
+        },
+        "mode": 420
+      },
+      {
+        "overwrite": true,
+        "path": "/etc/modules-load.d/br_netfilter.conf",
+        "contents": {
+          "compression": "",
+          "source": "data:,br_netfilter"
+        },
+        "mode": 420
+      },
+      {
+        "overwrite": true,
+        "path": "/etc/sysctl.d/k8s.conf",
+        "contents": {
+          "compression": "gzip",
+          "source": "data:;base64,H4sIAAAAAAAC/8pLLdFLKspMSU+FUrp5abrJiTk5upkFJYlJOanFCgq2CoZc+NSZQRXC1GUWlJnoZRbEp+UXlScWpSigA5A6QAAAAP//GxhMCXgAAAA="
+        },
+        "mode": 420
+      }
+    ]
+  }
+}
